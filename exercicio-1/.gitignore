@@ -1,0 +1,6 @@
+"" 
+ambiente
+.vscode
+t102/.vscode
+t102/home/__pycache__
+t102/db.sqlite3
