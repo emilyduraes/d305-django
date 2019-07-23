@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> {% block titulo %} {% endblock %} </title>
+    </head>
+    <body>
+        <nav>
+            <a href="/">INÍCIO</a>
+            <a href="autores">AUTORES</a>
+            <a href="noticias">NOTÍCIAS</a>
+        </nav>
+        {% block conteudo %}
+        {% endblock %} 
+    </body>
+</html>
