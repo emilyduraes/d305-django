@@ -1,32 +1,21 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'noticias.css' %}">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Noticia</title>
-</head>
-<body>
-    <nav>
-        <a href="autores">AUTORES</a>
-    </nav>
-    <header>
-        <h1>NOTICIAS NO BRASIL E NO MUNDO</h1>
-    </header>
-    <section>
-        <h2>NOTÍCIA 1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dignissimos obcaecati, sapiente rerum accusamus veritatis asperiores aliquid quam, quae aliquam, eligendi ipsum enim id similique distinctio fuga! Consequuntur, quasi amet!</p>
-
-        <h2>NOTÍCIA 2</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dignissimos obcaecati, sapiente rerum accusamus veritatis asperiores aliquid quam, quae aliquam, eligendi ipsum enim id similique distinctio fuga! Consequuntur, quasi amet!</p>
-
-        <h2>NOTÍCIA 3</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dignissimos obcaecati, sapiente rerum accusamus veritatis asperiores aliquid quam, quae aliquam, eligendi ipsum enim id similique distinctio fuga! Consequuntur, quasi amet!</p>
-
-        <h2>NOTÍCIA 4</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dignissimos obcaecati, sapiente rerum accusamus veritatis asperiores aliquid quam, quae aliquam, eligendi ipsum enim id similique distinctio fuga! Consequuntur, quasi amet!</p>
-    </section>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'noticias.css' %}">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> {% block titulo %} {% endblock %} </title>
+        {% block css %} {% endblock %}
+    </head>
+    <body>
+        <nav>
+            <a href="/">INÍCIO</a>
+            <a href="autores">AUTORES</a>
+            <a href="noticias">NOTÍCIAS</a>
+        </nav>
+        {% block conteudo %}
+        {% endblock %} 
+    </body>
 </html>
